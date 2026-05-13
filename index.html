@@ -2056,16 +2056,19 @@
     btn.disabled = true;
 
     try {
-      const res = await fetch('/api/submit', {
+      const res = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
+          access_key: '4b5b9b20-15c9-4657-897c-87e9b1182e5e',
+          subject: `New Reinstatement Enquiry — ${document.getElementById('f-company').value.trim() || name}`,
+          from_name: 'reinstatement.sg',
           name,
           company:  document.getElementById('f-company').value.trim(),
           email,
           phone,
-          size:     document.getElementById('f-size').value,
-          date:     document.getElementById('f-date').value,
+          'Space Size': document.getElementById('f-size').value,
+          'Move-Out Date': document.getElementById('f-date').value,
           message:  document.getElementById('f-msg').value.trim(),
         }),
       });
