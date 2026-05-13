@@ -2040,8 +2040,8 @@
   }
 
   /* ── FORM SUBMIT ───────────────────────────────────────── */
-  function submitForm() {
-    const name = document.getElementById('f-name').value.trim();
+  async function submitForm() {
+    const name  = document.getElementById('f-name').value.trim();
     const email = document.getElementById('f-email').value.trim();
     const phone = document.getElementById('f-phone').value.trim();
 
@@ -2050,14 +2050,46 @@
       return;
     }
 
-    const form = document.getElementById('quoteForm');
-    form.innerHTML = `
-      <div style="grid-column:1/-1;text-align:center;padding:60px 32px;display:flex;flex-direction:column;align-items:center;gap:20px;">
-        <div style="width:56px;height:56px;border-radius:50%;background:var(--accent-glow);border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:24px;">✓</div>
-        <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--text-1);">We've got your enquiry.</h3>
-        <p style="font-size:14px;color:var(--text-2);max-width:360px;line-height:1.7;">We'll be in touch within 4 business hours to schedule your free on-site assessment. For urgent enquiries, call <a href="tel:+6588733633" style="color:var(--accent)">+65 8873 3633</a>.</p>
-      </div>
-    `;
+    const btn = document.querySelector('#quoteForm .btn-primary');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = 'Sending…';
+    btn.disabled = true;
+
+    try {
+      const res = await fetch('/api/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          company:  document.getElementById('f-company').value.trim(),
+          email,
+          phone,
+          size:     document.getElementById('f-size').value,
+          date:     document.getElementById('f-date').value,
+          message:  document.getElementById('f-msg').value.trim(),
+        }),
+      });
+
+      const data = await res.json();
+
+      if (data.success) {
+        document.getElementById('quoteForm').innerHTML = `
+          <div style="grid-column:1/-1;text-align:center;padding:60px 32px;display:flex;flex-direction:column;align-items:center;gap:20px;">
+            <div style="width:56px;height:56px;border-radius:50%;background:var(--accent-glow);border:1px solid var(--accent);display:flex;align-items:center;justify-content:center;font-size:24px;">✓</div>
+            <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--text-1);">We've got your enquiry.</h3>
+            <p style="font-size:14px;color:var(--text-2);max-width:360px;line-height:1.7;">We'll be in touch within 4 business hours to schedule your free on-site assessment. For urgent enquiries, call <a href="tel:+6588733633" style="color:var(--accent)">+65 8873 3633</a>.</p>
+          </div>
+        `;
+      } else {
+        alert('Something went wrong. Please call us directly at +65 8873 3633.');
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      }
+    } catch {
+      alert('Something went wrong. Please call us directly at +65 8873 3633.');
+      btn.innerHTML = originalText;
+      btn.disabled = false;
+    }
   }
 
   /* ── ACTIVE NAV LINK ───────────────────────────────────── */
