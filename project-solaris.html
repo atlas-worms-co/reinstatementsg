@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Solaris one-north Grade A Eco-Premium Reinstatement — IA Builders & Engineering</title>
+<meta name="description" content="Grade A eco-premium office reinstatement at Solaris, one-north Singapore. Delivered ahead of schedule. GreenMark Platinum compliant.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#0C0F0E;--surface:#131716;--surface-2:#1A1E1D;--surface-3:#212624;
+    --accent:#0CB8A8;--accent-glow:rgba(12,184,168,0.12);
+    --text-1:#EEE9E0;--text-2:#8C9490;--text-3:#555E5B;
+    --border:rgba(238,233,224,0.07);--border-mid:rgba(238,233,224,0.12);
+    --font-display:'Plus Jakarta Sans',sans-serif;--font-body:'Outfit',sans-serif;--font-mono:'Barlow Condensed',sans-serif;
+    --nav-h:68px;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--bg);color:var(--text-1);font-family:var(--font-body);line-height:1.65;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  img{display:block;max-width:100%;}
+  .container{max-width:1100px;margin:0 auto;padding:0 32px;}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);display:flex;align-items:center;background:rgba(12,15,14,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+  nav .container{display:flex;align-items:center;justify-content:space-between;width:100%;}
+  .nav-logo{display:flex;flex-direction:column;line-height:1;}
+  .nav-logo span:first-child{font-family:var(--font-display);font-size:18px;font-weight:800;color:var(--text-1);letter-spacing:-0.02em;}
+  .nav-logo span:last-child{font-family:var(--font-mono);font-size:10px;font-weight:400;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;margin-top:2px;}
+  .nav-back{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-2);transition:color 0.2s;}
+  .nav-back:hover{color:var(--accent);}
+
+  .case-hero{padding-top:var(--nav-h);border-bottom:1px solid var(--border);}
+  .case-hero-inner{padding:72px 0 56px;}
+  .breadcrumb{display:flex;align-items:center;gap:8px;font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:24px;}
+  .breadcrumb a{color:var(--text-3);transition:color 0.2s;}
+  .breadcrumb a:hover{color:var(--accent);}
+  .case-type{font-family:var(--font-mono);font-size:12px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;}
+  .case-title{font-family:var(--font-display);font-size:clamp(2.2rem,4.5vw,3.6rem);font-weight:800;line-height:1.08;letter-spacing:-0.02em;color:var(--text-1);max-width:760px;margin-bottom:28px;}
+  .case-meta{display:flex;align-items:center;flex-wrap:wrap;border-top:1px solid var(--border);padding-top:28px;margin-top:28px;}
+  .meta-item{padding:0 40px 0 0;margin-right:40px;border-right:1px solid var(--border-mid);display:flex;flex-direction:column;gap:4px;}
+  .meta-item:last-child{border-right:none;}
+  .meta-label{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);}
+  .meta-value{font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--text-1);}
+  .meta-value.accent{color:var(--accent);}
+
+  .case-body{padding:80px 0;}
+  .case-layout{display:grid;grid-template-columns:1fr 320px;gap:80px;align-items:start;}
+  .case-main{display:flex;flex-direction:column;gap:64px;}
+
+  .section-label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent);margin-bottom:16px;display:flex;align-items:center;gap:10px;}
+  .section-label::before{content:'';display:block;width:20px;height:1px;background:var(--accent);flex-shrink:0;}
+  .section-title{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--text-1);margin-bottom:16px;}
+  .section-body{font-size:15px;color:var(--text-2);line-height:1.8;}
+  .section-body p+p{margin-top:14px;}
+
+  .scope-list{display:flex;flex-direction:column;gap:0;margin-top:8px;}
+  .scope-item{display:grid;grid-template-columns:40px 1fr;align-items:baseline;padding:14px 0;border-bottom:1px solid var(--border);}
+  .scope-item:first-child{border-top:1px solid var(--border);}
+  .scope-num{font-family:var(--font-mono);font-size:12px;font-weight:600;color:var(--text-3);}
+  .scope-text{font-size:14.5px;color:var(--text-2);line-height:1.55;}
+  .scope-text strong{color:var(--text-1);font-weight:600;}
+
+  .outcome-box{background:var(--accent-glow);border:1px solid rgba(12,184,168,0.2);border-radius:12px;padding:32px;}
+  .outcome-stat{font-family:var(--font-mono);font-size:3rem;font-weight:700;color:var(--accent);line-height:1;margin-bottom:8px;}
+  .outcome-desc{font-size:15px;color:var(--text-2);line-height:1.7;}
+
+  /* PHOTOS COMING SOON */
+  .photos-pending{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:56px 40px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px;}
+  .pending-icon{width:56px;height:56px;border-radius:50%;background:var(--surface-2);border:1px solid var(--border-mid);display:flex;align-items:center;justify-content:center;font-size:22px;}
+  .pending-title{font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--text-1);}
+  .pending-sub{font-size:13.5px;color:var(--text-2);max-width:380px;line-height:1.65;}
+
+  .sidebar-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:24px;}
+  .sidebar-card h4{font-family:var(--font-mono);font-size:10px;font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--text-3);margin-bottom:16px;}
+  .sidebar-tag{display:inline-flex;align-items:center;gap:6px;background:var(--surface-2);border:1px solid var(--border);border-radius:4px;padding:5px 10px;margin:3px;font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:0.08em;color:var(--text-2);text-transform:uppercase;}
+  .sidebar-cta{background:var(--accent);color:#000;font-family:var(--font-body);font-size:14px;font-weight:600;padding:14px 20px;border-radius:6px;display:block;text-align:center;transition:background 0.2s;border:none;cursor:pointer;width:100%;}
+  .sidebar-cta:hover{background:#0ecfbd;}
+  .sidebar-phone{font-family:var(--font-display);font-size:18px;font-weight:700;color:var(--accent);text-align:center;display:block;margin-top:10px;}
+  .sidebar-services{display:flex;flex-wrap:wrap;}
+  .case-sidebar{display:flex;flex-direction:column;gap:24px;position:sticky;top:calc(var(--nav-h) + 32px);}
+
+  .greenmark-callout{background:linear-gradient(135deg,rgba(12,184,168,0.08),rgba(12,184,168,0.03));border:1px solid rgba(12,184,168,0.2);border-radius:12px;padding:28px;display:flex;gap:16px;align-items:flex-start;}
+  .greenmark-icon{font-size:28px;flex-shrink:0;}
+  .greenmark-text h4{font-family:var(--font-display);font-size:15px;font-weight:700;color:var(--text-1);margin-bottom:6px;}
+  .greenmark-text p{font-size:13.5px;color:var(--text-2);line-height:1.6;}
+
+  .next-project{border-top:1px solid var(--border);padding:60px 0;background:var(--surface);}
+  .next-inner{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;}
+  .next-label{font-family:var(--font-mono);font-size:11px;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-bottom:8px;}
+  .next-title{font-family:var(--font-display);font-size:1.4rem;font-weight:700;color:var(--text-1);}
+  .next-arrow{display:flex;align-items:center;gap:10px;font-family:var(--font-display);font-size:14px;font-weight:600;color:var(--accent);border:1px solid rgba(12,184,168,0.3);border-radius:6px;padding:12px 20px;transition:background 0.2s,border-color 0.2s;white-space:nowrap;}
+  .next-arrow:hover{background:var(--accent-glow);border-color:var(--accent);}
+
+  footer{background:var(--bg);border-top:1px solid var(--border);padding:32px 0;}
+  .footer-simple{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+  .footer-copy{font-size:12.5px;color:var(--text-3);}
+
+  @media(max-width:900px){.case-layout{grid-template-columns:1fr;}.case-sidebar{position:static;}}
+  @media(max-width:600px){.container{padding:0 20px;}.meta-item{padding:0 20px 0 0;margin-right:20px;}.next-inner{flex-direction:column;align-items:flex-start;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <span>IA Builders</span>
+      <span>Reinstatement Specialists</span>
+    </a>
+    <a href="index.html#projects" class="nav-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      All Projects
+    </a>
+  </div>
+</nav>
+
+<section class="case-hero">
+  <div class="container case-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>›</span>
+      <a href="index.html#projects">Projects</a><span>›</span>
+      <span>Solaris one-north</span>
+    </div>
+    <div class="case-type">Grade A Eco-Premium Office Reinstatement</div>
+    <h1 class="case-title">Global Safety & Innovation Organisation — Solaris, one-north</h1>
+    <div class="case-meta">
+      <div class="meta-item"><span class="meta-label">Location</span><span class="meta-value">Solaris, one-north, Singapore</span></div>
+      <div class="meta-item"><span class="meta-label">Building</span><span class="meta-value">BCA GreenMark Platinum</span></div>
+      <div class="meta-item"><span class="meta-label">Outcome</span><span class="meta-value accent">✓ Ahead of Schedule</span></div>
+      <div class="meta-item"><span class="meta-label">Landlord Sign-Off</span><span class="meta-value accent">✓ Full Compliance</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="case-body">
+  <div class="container">
+    <div class="case-layout">
+      <div class="case-main">
+
+        <div>
+          <div class="section-label">Overview</div>
+          <h2 class="section-title">Singapore's most demanding reinstatement spec</h2>
+          <div class="section-body">
+            <p>Solaris at one-north is one of Singapore's most technically complex commercial buildings — a BCA GreenMark Platinum certified development with integrated sustainable systems throughout. Every floor has eco-specific infrastructure: rainwater harvesting, climate-responsive ceilings, low-VOC environments, and integrated landscaping.</p>
+            <p>A global safety and innovation organisation vacating their tenancy needed full reinstatement against a landlord specification that runs to exceptional detail. Eco-compliant systems couldn't simply be "removed" — they had to be decommissioned in a way that preserved the building's green certification.</p>
+          </div>
+        </div>
+
+        <div class="greenmark-callout">
+          <div class="greenmark-icon">🌿</div>
+          <div class="greenmark-text">
+            <h4>BCA GreenMark Platinum — What This Means for Reinstatement</h4>
+            <p>GreenMark Platinum buildings have strict requirements around how systems are removed and what materials are used. Low-VOC paint isn't optional — it's mandated. Sustainable flooring materials require specialist handling. The rainwater harvesting and eco-ventilation systems must be decommissioned with full documentation for the building management. Most contractors aren't equipped for this. We were.</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="section-label">Scope of Work</div>
+          <h2 class="section-title">What we did</h2>
+          <div class="scope-list">
+            <div class="scope-item"><span class="scope-num">01</span><span class="scope-text"><strong>Advanced lighting decommissioning</strong> — Climate-responsive and energy-management lighting systems removed and documented for building records</span></div>
+            <div class="scope-item"><span class="scope-num">02</span><span class="scope-text"><strong>Custom partition removal</strong> — Tenant partitions removed with minimal impact to existing structural and acoustic elements</span></div>
+            <div class="scope-item"><span class="scope-num">03</span><span class="scope-text"><strong>Eco-flooring restoration</strong> — Bamboo and sustainable flooring materials removed using specialist methods; subfloor restored</span></div>
+            <div class="scope-item"><span class="scope-num">04</span><span class="scope-text"><strong>Rainwater harvesting decommissioning</strong> — Tenant-side connections to the building's rainwater system formally disconnected and capped per building spec</span></div>
+            <div class="scope-item"><span class="scope-num">05</span><span class="scope-text"><strong>Eco-ventilation restoration</strong> — Low-energy ventilation system returned to original building configuration</span></div>
+            <div class="scope-item"><span class="scope-num">06</span><span class="scope-text"><strong>Landscaped area reinstatement</strong> — Outdoor terrace and garden zones cleared and restored; planters and irrigation removed</span></div>
+            <div class="scope-item"><span class="scope-num">07</span><span class="scope-text"><strong>Low-VOC repainting throughout</strong> — All surfaces repainted exclusively with low-VOC formulations to maintain building certification</span></div>
+            <div class="scope-item"><span class="scope-num">08</span><span class="scope-text"><strong>Landlord & building management coordination</strong> — Full compliance documentation prepared; all decommissioning signed off against the building's GreenMark records</span></div>
+          </div>
+        </div>
+
+        <div class="outcome-box">
+          <div class="section-label">Outcome</div>
+          <div class="outcome-stat">Ahead of Schedule</div>
+          <p class="outcome-desc">The space was handed over before the agreed deadline — uncommon for a reinstatement project of this technical complexity. Full landlord compliance was achieved across all GreenMark requirements. The building management confirmed all eco-systems were correctly decommissioned with no impact to the building's Platinum certification standing.</p>
+        </div>
+
+        <div>
+          <div class="section-label">Project Gallery</div>
+          <h2 class="section-title" style="margin-bottom:24px;">Photos</h2>
+          <div class="photos-pending">
+            <div class="pending-icon">📷</div>
+            <div class="pending-title">Project photos being prepared</div>
+            <p class="pending-sub">Our team is curating before and after visuals for this project. Check back soon, or contact us directly for more information about this reinstatement.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="case-sidebar">
+        <div class="sidebar-card">
+          <h4>Services Delivered</h4>
+          <div class="sidebar-services">
+            <span class="sidebar-tag">Grade A</span>
+            <span class="sidebar-tag">Eco Compliance</span>
+            <span class="sidebar-tag">MEP</span>
+            <span class="sidebar-tag">Low-VOC Paint</span>
+            <span class="sidebar-tag">Landscaping</span>
+            <span class="sidebar-tag">Landlord Coord.</span>
+          </div>
+        </div>
+        <div class="sidebar-card">
+          <h4>Grade A or Eco-Premium Space?</h4>
+          <p style="font-size:13.5px;color:var(--text-2);line-height:1.65;margin-bottom:16px;">Grade A and GreenMark buildings have reinstatement specs that most contractors can't meet. We can. Free on-site assessment.</p>
+          <a href="index.html#quote" class="sidebar-cta">Get a Free Quote →</a>
+          <a href="tel:+6588733633" class="sidebar-phone">+65 8873 3633</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Certifications</h4>
+          <div class="sidebar-services">
+            <span class="sidebar-tag">BizSafe Star</span>
+            <span class="sidebar-tag">ISO 45001</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="next-project">
+  <div class="container next-inner">
+    <div>
+      <div class="next-label">Next Project</div>
+      <div class="next-title">CBD Singapore — Grade A Financial Office</div>
+    </div>
+    <a href="project-cbd.html" class="next-arrow">View Case Study →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container footer-simple">
+    <div class="footer-copy">© 2024 IA Builders & Engineering Pte Ltd</div>
+    <div class="footer-copy"><a href="tel:+6588733633" style="color:var(--accent)">+65 8873 3633</a></div>
+  </div>
+</footer>
+</body>
+</html>

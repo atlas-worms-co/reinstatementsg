@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Changi South Industrial Reinstatement — IA Builders & Engineering</title>
+<meta name="description" content="Full reinstatement of an industrial facility and office space in Changi South, Singapore. Before, during, and after documentation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:          #0C0F0E;
+    --surface:     #131716;
+    --surface-2:   #1A1E1D;
+    --surface-3:   #212624;
+    --accent:      #0CB8A8;
+    --accent-glow: rgba(12,184,168,0.12);
+    --text-1:      #EEE9E0;
+    --text-2:      #8C9490;
+    --text-3:      #555E5B;
+    --border:      rgba(238,233,224,0.07);
+    --border-mid:  rgba(238,233,224,0.12);
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body:    'Outfit', sans-serif;
+    --font-mono:    'Barlow Condensed', sans-serif;
+    --nav-h: 68px;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text-1); font-family: var(--font-body); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  a { color: inherit; text-decoration: none; }
+  img { display: block; max-width: 100%; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    height: var(--nav-h); display: flex; align-items: center;
+    background: rgba(12,15,14,0.92); backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav .container { display: flex; align-items: center; justify-content: space-between; width: 100%; }
+  .nav-logo { display: flex; flex-direction: column; line-height: 1; }
+  .nav-logo span:first-child { font-family: var(--font-display); font-size: 18px; font-weight: 800; color: var(--text-1); letter-spacing: -0.02em; }
+  .nav-logo span:last-child { font-family: var(--font-mono); font-size: 10px; font-weight: 400; letter-spacing: 0.12em; color: var(--accent); text-transform: uppercase; margin-top: 2px; }
+  .nav-back { display: flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 12px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-2); transition: color 0.2s; }
+  .nav-back:hover { color: var(--accent); }
+  .nav-back svg { transition: transform 0.2s; }
+  .nav-back:hover svg { transform: translateX(-3px); }
+
+  /* HERO */
+  .case-hero {
+    padding-top: var(--nav-h);
+    padding-bottom: 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .case-hero-inner {
+    padding: 72px 0 56px;
+  }
+  .breadcrumb {
+    display: flex; align-items: center; gap: 8px;
+    font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-3);
+    margin-bottom: 24px;
+  }
+  .breadcrumb a { color: var(--text-3); transition: color 0.2s; }
+  .breadcrumb a:hover { color: var(--accent); }
+  .breadcrumb span { color: var(--text-3); }
+  .case-type {
+    font-family: var(--font-mono); font-size: 12px; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent);
+    margin-bottom: 16px;
+  }
+  .case-title {
+    font-family: var(--font-display); font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+    font-weight: 800; line-height: 1.08; letter-spacing: -0.02em;
+    color: var(--text-1); max-width: 760px; margin-bottom: 28px;
+  }
+  .case-meta {
+    display: flex; align-items: center; gap: 0; flex-wrap: wrap;
+    border-top: 1px solid var(--border); padding-top: 28px; margin-top: 28px;
+  }
+  .meta-item {
+    padding: 0 40px 0 0; margin-right: 40px;
+    border-right: 1px solid var(--border-mid);
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .meta-item:last-child { border-right: none; }
+  .meta-label { font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); }
+  .meta-value { font-family: var(--font-display); font-size: 15px; font-weight: 700; color: var(--text-1); }
+  .meta-value.accent { color: var(--accent); }
+
+  /* CONTENT BODY */
+  .case-body { padding: 80px 0; }
+  .case-layout { display: grid; grid-template-columns: 1fr 320px; gap: 80px; align-items: start; }
+  .case-main { display: flex; flex-direction: column; gap: 64px; }
+
+  .section-label {
+    font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+    letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent);
+    margin-bottom: 16px; display: flex; align-items: center; gap: 10px;
+  }
+  .section-label::before { content: ''; display: block; width: 20px; height: 1px; background: var(--accent); flex-shrink: 0; }
+
+  .section-title { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--text-1); margin-bottom: 16px; }
+  .section-body { font-size: 15px; color: var(--text-2); line-height: 1.8; }
+  .section-body p + p { margin-top: 14px; }
+
+  /* SCOPE LIST */
+  .scope-list { display: flex; flex-direction: column; gap: 0; margin-top: 8px; }
+  .scope-item {
+    display: grid; grid-template-columns: 40px 1fr;
+    align-items: baseline; gap: 0;
+    padding: 14px 0; border-bottom: 1px solid var(--border);
+  }
+  .scope-item:first-child { border-top: 1px solid var(--border); }
+  .scope-num { font-family: var(--font-mono); font-size: 12px; font-weight: 600; color: var(--text-3); }
+  .scope-text { font-size: 14.5px; color: var(--text-2); line-height: 1.55; }
+  .scope-text strong { color: var(--text-1); font-weight: 600; }
+
+  /* OUTCOME BOX */
+  .outcome-box {
+    background: var(--accent-glow); border: 1px solid rgba(12,184,168,0.2);
+    border-radius: 12px; padding: 32px;
+  }
+  .outcome-box .section-label { margin-bottom: 12px; }
+  .outcome-stat { font-family: var(--font-mono); font-size: 3rem; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+  .outcome-desc { font-size: 15px; color: var(--text-2); line-height: 1.7; }
+
+  /* GALLERY */
+  .gallery-section { padding: 0 0 80px; }
+  .gallery-section .section-label { margin-bottom: 12px; }
+  .gallery-phase-title {
+    font-family: var(--font-display); font-size: 1.1rem; font-weight: 700;
+    color: var(--text-1); margin-bottom: 16px; margin-top: 40px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .gallery-phase-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+  .gallery-grid {
+    display: grid; gap: 8px;
+  }
+  .gallery-grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .gallery-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .gallery-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .gallery-img {
+    aspect-ratio: 4/3; overflow: hidden; border-radius: 6px;
+    background: var(--surface-2); cursor: pointer; position: relative;
+  }
+  .gallery-img img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.4s ease, opacity 0.2s;
+  }
+  .gallery-img:hover img { transform: scale(1.04); }
+  .gallery-img .img-overlay {
+    position: absolute; inset: 0; background: rgba(0,0,0,0);
+    transition: background 0.3s; display: flex; align-items: center; justify-content: center;
+    color: white; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.1em;
+    text-transform: uppercase; opacity: 0; transition: 0.3s;
+  }
+  .gallery-img:hover .img-overlay { background: rgba(0,0,0,0.3); opacity: 1; }
+
+  /* SIDEBAR */
+  .case-sidebar { display: flex; flex-direction: column; gap: 24px; position: sticky; top: calc(var(--nav-h) + 32px); }
+  .sidebar-card {
+    background: var(--surface); border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px;
+  }
+  .sidebar-card h4 {
+    font-family: var(--font-mono); font-size: 10px; font-weight: 600;
+    letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-3);
+    margin-bottom: 16px;
+  }
+  .sidebar-tag {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--surface-2); border: 1px solid var(--border);
+    border-radius: 4px; padding: 5px 10px; margin: 3px;
+    font-family: var(--font-mono); font-size: 11px; font-weight: 600;
+    letter-spacing: 0.08em; color: var(--text-2); text-transform: uppercase;
+  }
+  .sidebar-cta {
+    background: var(--accent); color: #000; font-family: var(--font-body);
+    font-size: 14px; font-weight: 600; letter-spacing: 0.02em;
+    padding: 14px 20px; border-radius: 6px; display: block;
+    text-align: center; transition: background 0.2s, transform 0.15s;
+    border: none; cursor: pointer; width: 100%;
+  }
+  .sidebar-cta:hover { background: #0ecfbd; transform: translateY(-1px); }
+  .sidebar-phone { font-family: var(--font-display); font-size: 18px; font-weight: 700; color: var(--accent); text-align: center; display: block; margin-top: 10px; }
+  .sidebar-services { display: flex; flex-wrap: wrap; }
+
+  /* LIGHTBOX */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(0,0,0,0.95); display: flex; align-items: center; justify-content: center;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s;
+    padding: 20px;
+  }
+  .lightbox.open { opacity: 1; pointer-events: all; }
+  .lightbox img { max-width: 90vw; max-height: 85vh; object-fit: contain; border-radius: 4px; }
+  .lightbox-close {
+    position: absolute; top: 20px; right: 24px;
+    background: none; border: none; color: var(--text-2);
+    font-size: 28px; cursor: pointer; line-height: 1;
+    transition: color 0.2s;
+  }
+  .lightbox-close:hover { color: var(--text-1); }
+  .lightbox-nav {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.08); border: 1px solid var(--border-mid);
+    color: var(--text-1); width: 48px; height: 48px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px; cursor: pointer; transition: background 0.2s;
+  }
+  .lightbox-nav:hover { background: rgba(255,255,255,0.15); }
+  .lightbox-nav.prev { left: 16px; }
+  .lightbox-nav.next { right: 16px; }
+  .lightbox-counter {
+    position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%);
+    font-family: var(--font-mono); font-size: 12px; color: var(--text-3);
+    letter-spacing: 0.1em;
+  }
+
+  /* NEXT PROJECT */
+  .next-project {
+    border-top: 1px solid var(--border); padding: 60px 0;
+    background: var(--surface);
+  }
+  .next-inner {
+    display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap;
+  }
+  .next-label { font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-3); margin-bottom: 8px; }
+  .next-title { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--text-1); }
+  .next-arrow {
+    display: flex; align-items: center; gap: 10px; font-family: var(--font-display);
+    font-size: 14px; font-weight: 600; color: var(--accent);
+    border: 1px solid rgba(12,184,168,0.3); border-radius: 6px;
+    padding: 12px 20px; transition: background 0.2s, border-color 0.2s;
+    white-space: nowrap;
+  }
+  .next-arrow:hover { background: var(--accent-glow); border-color: var(--accent); }
+
+  /* FOOTER */
+  footer {
+    background: var(--bg); border-top: 1px solid var(--border);
+    padding: 32px 0;
+  }
+  .footer-simple {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 16px; flex-wrap: wrap;
+  }
+  .footer-copy { font-size: 12.5px; color: var(--text-3); }
+
+  @media (max-width: 900px) {
+    .case-layout { grid-template-columns: 1fr; }
+    .case-sidebar { position: static; }
+    .gallery-grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
+    .gallery-grid.cols-3 { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .container { padding: 0 20px; }
+    .case-meta { gap: 16px; }
+    .meta-item { padding: 0 20px 0 0; margin-right: 20px; }
+    .gallery-grid.cols-2, .gallery-grid.cols-3, .gallery-grid.cols-4 { grid-template-columns: 1fr; }
+    .next-inner { flex-direction: column; align-items: flex-start; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <span>IA Builders</span>
+      <span>Reinstatement Specialists</span>
+    </a>
+    <a href="index.html#projects" class="nav-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+      All Projects
+    </a>
+  </div>
+</nav>
+
+<section class="case-hero">
+  <div class="container case-hero-inner">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a>
+      <span>›</span>
+      <a href="index.html#projects">Projects</a>
+      <span>›</span>
+      <span>Changi South</span>
+    </div>
+    <div class="case-type">Industrial + Office Reinstatement</div>
+    <h1 class="case-title">Global Measurement Technology Firm — Changi South</h1>
+    <div class="case-meta">
+      <div class="meta-item">
+        <span class="meta-label">Location</span>
+        <span class="meta-value">Changi South, Singapore</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Project Type</span>
+        <span class="meta-value">Industrial Facility + Office</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Outcome</span>
+        <span class="meta-value accent">✓ Completed On Schedule</span>
+      </div>
+      <div class="meta-item">
+        <span class="meta-label">Landlord Sign-Off</span>
+        <span class="meta-value accent">✓ Zero Defects</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="case-body">
+  <div class="container">
+    <div class="case-layout">
+      <div class="case-main">
+
+        <!-- OVERVIEW -->
+        <div>
+          <div class="section-label">Overview</div>
+          <h2 class="section-title">Full industrial strip-out and restoration</h2>
+          <div class="section-body">
+            <p>A global leader in coordinate measurement and imaging technology was vacating their Changi South facility — a combined industrial unit and office space with years of heavy fit-out. The brief was complete reinstatement to original shell condition, compliant with landlord specifications and ready for the next tenant.</p>
+            <p>The project required coordinating equipment dismantling, structural demolition, MEP reinstatement, and finishing works — all within a fixed lease deadline, in an active industrial zone with access and safety constraints.</p>
+          </div>
+        </div>
+
+        <!-- SCOPE -->
+        <div>
+          <div class="section-label">Scope of Work</div>
+          <h2 class="section-title">What we did</h2>
+          <div class="scope-list">
+            <div class="scope-item"><span class="scope-num">01</span><span class="scope-text"><strong>Equipment dismantling</strong> — Specialist machinery and measurement equipment removed and disposed of in compliance with industrial waste requirements</span></div>
+            <div class="scope-item"><span class="scope-num">02</span><span class="scope-text"><strong>Cubicle and partition removal</strong> — Full blue cubicle partition system stripped out; structural walls inspected and patched</span></div>
+            <div class="scope-item"><span class="scope-num">03</span><span class="scope-text"><strong>Suspended ceiling reinstatement</strong> — Existing ceiling grid removed; original specifications restored above and below ceiling line</span></div>
+            <div class="scope-item"><span class="scope-num">04</span><span class="scope-text"><strong>Electrical rewiring</strong> — All tenant electrical modifications reversed; circuits returned to original building distribution configuration</span></div>
+            <div class="scope-item"><span class="scope-num">05</span><span class="scope-text"><strong>Flooring restoration</strong> — Carpet removed; concrete subfloor levelled and polished to landlord specification</span></div>
+            <div class="scope-item"><span class="scope-num">06</span><span class="scope-text"><strong>Fire safety compliance</strong> — Fire suppression and detection systems verified and reinstated to original configuration</span></div>
+            <div class="scope-item"><span class="scope-num">07</span><span class="scope-text"><strong>Wall patching and painting</strong> — Full perimeter wall reinstatement; two coats of landlord-approved paint throughout</span></div>
+            <div class="scope-item"><span class="scope-num">08</span><span class="scope-text"><strong>Landlord coordination</strong> — Managed all building management communications, progress inspections, and final sign-off documentation</span></div>
+          </div>
+        </div>
+
+        <!-- OUTCOME -->
+        <div class="outcome-box">
+          <div class="section-label">Outcome</div>
+          <div class="outcome-stat">On Time</div>
+          <p class="outcome-desc">The facility was handed over on the agreed date, meeting all landlord specifications. The space — previously a cluttered industrial office with scattered furniture, exposed ceiling pipes, and cubicle partitions — was returned as a clean, open, polished shell ready for the next tenant. Landlord sign-off was completed without defect rectification requests.</p>
+        </div>
+
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="case-sidebar">
+        <div class="sidebar-card">
+          <h4>Services Delivered</h4>
+          <div class="sidebar-services">
+            <span class="sidebar-tag">Demolition</span>
+            <span class="sidebar-tag">MEP</span>
+            <span class="sidebar-tag">Flooring</span>
+            <span class="sidebar-tag">Electrical</span>
+            <span class="sidebar-tag">Ceiling Works</span>
+            <span class="sidebar-tag">Painting</span>
+            <span class="sidebar-tag">Landlord Coord.</span>
+          </div>
+        </div>
+        <div class="sidebar-card">
+          <h4>Similar Project?</h4>
+          <p style="font-size:13.5px;color:var(--text-2);line-height:1.65;margin-bottom:16px;">Industrial or office space in Changi, Tuas, or any Singapore business park? We'll give you a free on-site assessment within 48 hours.</p>
+          <a href="index.html#quote" class="sidebar-cta">Get a Free Quote →</a>
+          <a href="tel:+6588733633" class="sidebar-phone">+65 8873 3633</a>
+        </div>
+        <div class="sidebar-card">
+          <h4>Certifications</h4>
+          <div class="sidebar-services">
+            <span class="sidebar-tag">BizSafe Star</span>
+            <span class="sidebar-tag">ISO 45001</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery-section">
+  <div class="container">
+    <div class="section-label">Project Gallery</div>
+
+    <div class="gallery-phase-title">Before Works</div>
+    <div class="gallery-grid cols-2">
+      <div class="gallery-img" onclick="openLightbox(0)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_before-work_1.jpg" alt="Changi South before reinstatement — view 1" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(1)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_before-work_2.jpg" alt="Changi South before reinstatement — view 2" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(2)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_before-work_3.jpg" alt="Changi South before reinstatement — view 3" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(3)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_before-work_4.jpg" alt="Changi South before reinstatement — view 4" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+    </div>
+
+    <div class="gallery-phase-title">During Reinstatement</div>
+    <div class="gallery-grid cols-4">
+      <div class="gallery-img" onclick="openLightbox(4)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_5.jpg" alt="During reinstatement — 1" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(5)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_6.jpg" alt="During reinstatement — 2" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(6)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_7.jpg" alt="During reinstatement — 3" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(7)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_8.jpg" alt="During reinstatement — 4" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(8)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_9.jpg" alt="During reinstatement — 5" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(9)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_10.jpg" alt="During reinstatement — 6" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(10)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_11.jpg" alt="During reinstatement — 7" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(11)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_12.jpg" alt="During reinstatement — 8" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+    </div>
+
+    <div class="gallery-phase-title">Nearing Completion</div>
+    <div class="gallery-grid cols-3">
+      <div class="gallery-img" onclick="openLightbox(12)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_almost-complete-reinstatement_13.jpg" alt="Nearing completion — 1" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(13)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_almost-complete-reinstatement14.jpg" alt="Nearing completion — 2" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(14)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_almost-complete-reinstatement15.jpg" alt="Nearing completion — 3" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(15)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_almost-complete-reinstatement16.jpg" alt="Nearing completion — 4" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(16)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_almost-complete-reinstatement17.jpg" alt="Nearing completion — 5" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+      <div class="gallery-img" onclick="openLightbox(17)">
+        <img src="https://reinstatement.sg/wp-content/uploads/changi-south_almost-complete-reinstatement18.jpg" alt="Nearing completion — 6" loading="lazy">
+        <div class="img-overlay">View</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOnBg(event)">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <button class="lightbox-nav prev" onclick="navLightbox(-1)">‹</button>
+  <img id="lightbox-img" src="" alt="">
+  <button class="lightbox-nav next" onclick="navLightbox(1)">›</button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
+<!-- NEXT PROJECT -->
+<div class="next-project">
+  <div class="container next-inner">
+    <div>
+      <div class="next-label">Next Project</div>
+      <div class="next-title">Solaris one-north — Grade A Eco-Premium Office</div>
+    </div>
+    <a href="project-solaris.html" class="next-arrow">View Case Study →</a>
+  </div>
+</div>
+
+<footer>
+  <div class="container footer-simple">
+    <div class="footer-copy">© 2024 IA Builders & Engineering Pte Ltd</div>
+    <div class="footer-copy"><a href="tel:+6588733633" style="color:var(--accent)">+65 8873 3633</a></div>
+  </div>
+</footer>
+
+<script>
+  const images = [
+    'https://reinstatement.sg/wp-content/uploads/changi-south_before-work_1.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_before-work_2.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_before-work_3.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_before-work_4.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_5.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_6.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_7.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_8.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_9.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_10.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_11.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_during-reinstatement_12.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_almost-complete-reinstatement_13.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_almost-complete-reinstatement14.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_almost-complete-reinstatement15.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_almost-complete-reinstatement16.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_almost-complete-reinstatement17.jpg',
+    'https://reinstatement.sg/wp-content/uploads/changi-south_almost-complete-reinstatement18.jpg',
+  ];
+  let current = 0;
+
+  function openLightbox(i) {
+    current = i;
+    document.getElementById('lightbox-img').src = images[i];
+    document.getElementById('lightbox-counter').textContent = (i + 1) + ' / ' + images.length;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeLightboxOnBg(e) {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+  }
+  function navLightbox(dir) {
+    current = (current + dir + images.length) % images.length;
+    document.getElementById('lightbox-img').src = images[current];
+    document.getElementById('lightbox-counter').textContent = (current + 1) + ' / ' + images.length;
+  }
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'ArrowLeft') navLightbox(-1);
+    if (e.key === 'ArrowRight') navLightbox(1);
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+</body>
+</html>

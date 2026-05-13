@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Office Reinstatement Blog Singapore | IA Builders &amp; Engineering</title>
+  <meta name="description" content="Expert guides on office reinstatement in Singapore. Costs, lease clauses, hacking works, Grade A offices. Free advice from IA Builders." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Office Reinstatement Blog Singapore | IA Builders &amp; Engineering" />
+  <meta property="og:description" content="Expert guides on office reinstatement in Singapore. Costs, lease clauses, hacking works, Grade A offices. Free advice from IA Builders." />
+  <meta property="og:url" content="https://reinstatement.sg/blog.html" />
+  <meta property="og:site_name" content="IA Builders &amp; Engineering" />
+  <link rel="canonical" href="https://reinstatement.sg/blog.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0C0F0E;
+      --surface: #131716;
+      --surface-2: #1A1E1D;
+      --surface-3: #212624;
+      --accent: #0CB8A8;
+      --accent-glow: rgba(12,184,168,0.12);
+      --text-1: #EEE9E0;
+      --text-2: #8C9490;
+      --text-3: #555E5B;
+      --border: rgba(238,233,224,0.07);
+      --border-mid: rgba(238,233,224,0.12);
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+      --font-body: 'Outfit', sans-serif;
+      --font-mono: 'Barlow Condensed', sans-serif;
+      --nav-h: 68px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--text-1);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-h);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      background: rgba(12,15,14,0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-logo {
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+      text-decoration: none;
+    }
+
+    .nav-logo-name {
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--text-1);
+      letter-spacing: -0.01em;
+    }
+
+    .nav-logo-sub {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 400;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-2);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--text-1);
+    }
+
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 9px 20px;
+      background: var(--accent);
+      color: #0C0F0E;
+      font-family: var(--font-body);
+      font-size: 13px;
+      font-weight: 600;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn-cta:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    /* HERO */
+    .hero {
+      padding: calc(var(--nav-h) + 80px) 40px 80px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px;
+    }
+
+    .section-label::before {
+      content: '';
+      display: block;
+      width: 20px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 5vw, 56px);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: var(--text-1);
+      max-width: 680px;
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--text-2);
+      max-width: 560px;
+      line-height: 1.6;
+    }
+
+    /* BLOG GRID */
+    .blog-section {
+      padding: 0 40px 100px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .blog-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      text-decoration: none;
+      transition: border-color 0.25s, transform 0.25s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--accent-glow);
+      opacity: 0;
+      transition: opacity 0.25s;
+      border-radius: 12px;
+    }
+
+    .blog-card:hover {
+      border-color: var(--border-mid);
+      transform: translateY(-2px);
+    }
+
+    .blog-card:hover::before {
+      opacity: 1;
+    }
+
+    .card-category {
+      display: inline-flex;
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .card-title {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--text-1);
+      letter-spacing: -0.01em;
+      position: relative;
+    }
+
+    .card-excerpt {
+      font-size: 15px;
+      color: var(--text-2);
+      line-height: 1.6;
+      flex: 1;
+      position: relative;
+    }
+
+    .card-link {
+      font-family: var(--font-body);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--accent);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      position: relative;
+      transition: gap 0.2s;
+    }
+
+    .blog-card:hover .card-link {
+      gap: 8px;
+    }
+
+    /* BOTTOM CTA */
+    .bottom-cta {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .bottom-cta-inner {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .bottom-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: var(--text-1);
+      margin-bottom: 16px;
+    }
+
+    .bottom-cta p {
+      font-size: 16px;
+      color: var(--text-2);
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+
+    .cta-buttons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      padding: 14px 28px;
+      background: var(--accent);
+      color: #0C0F0E;
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 600;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      padding: 14px 28px;
+      background: transparent;
+      color: var(--text-1);
+      font-family: var(--font-body);
+      font-size: 15px;
+      font-weight: 500;
+      border-radius: 8px;
+      border: 1px solid var(--border-mid);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 24px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+    }
+
+    footer p {
+      font-size: 13px;
+      color: var(--text-3);
+    }
+
+    footer a {
+      font-size: 13px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links { display: none; }
+      .hero { padding: calc(var(--nav-h) + 48px) 20px 48px; }
+      .blog-section { padding: 0 20px 60px; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .bottom-cta { padding: 60px 20px; }
+      footer { padding: 20px; flex-direction: column; gap: 8px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <span class="nav-logo-name">IA Builders</span>
+      <span class="nav-logo-sub">Reinstatement Specialists</span>
+    </a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#process">Process</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+      <a href="index.html#quote" class="btn-cta">Get Free Quote</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="section-label">Knowledge Base</span>
+    <h1>Everything you need to know about reinstatement.</h1>
+    <p class="hero-sub">Practical guides for tenants, property managers, and facilities teams navigating reinstatement in Singapore.</p>
+  </section>
+
+  <!-- BLOG GRID -->
+  <section class="blog-section">
+    <div class="blog-grid">
+
+      <a href="blog-office-reinstatement-cost.html" class="blog-card">
+        <span class="card-category">Costs &amp; Budgeting</span>
+        <h2 class="card-title">How Much Does Office Reinstatement Cost in Singapore?</h2>
+        <p class="card-excerpt">SGD $10–$40+ per sqft depending on scope. What drives the price and how to budget accurately.</p>
+        <span class="card-link">Read Article →</span>
+      </a>
+
+      <a href="blog-reinstatement-vs-renovation.html" class="blog-card">
+        <span class="card-category">Explainer</span>
+        <h2 class="card-title">Office Reinstatement vs. Renovation: What's the Difference?</h2>
+        <p class="card-excerpt">Two different processes with different timing, costs, and lease implications. Know which one your tenancy agreement actually requires.</p>
+        <span class="card-link">Read Article →</span>
+      </a>
+
+      <a href="blog-reinstatement-clauses.html" class="blog-card">
+        <span class="card-category">Lease &amp; Legal</span>
+        <h2 class="card-title">Understanding Reinstatement Clauses in Commercial Lease Agreements</h2>
+        <p class="card-excerpt">What to look for in your reinstatement clause, what to negotiate, and the pitfalls that cost tenants their security deposit.</p>
+        <span class="card-link">Read Article →</span>
+      </a>
+
+      <a href="blog-grade-a-reinstatement.html" class="blog-card">
+        <span class="card-category">Contractor Selection</span>
+        <h2 class="card-title">What to Look for in a Grade A Office Reinstatement Company</h2>
+        <p class="card-excerpt">Five criteria that separate qualified Grade A reinstatement contractors from those who will create landlord disputes.</p>
+        <span class="card-link">Read Article →</span>
+      </a>
+
+      <a href="blog-hacking-demolition.html" class="blog-card">
+        <span class="card-category">Technical Guide</span>
+        <h2 class="card-title">Guide to Hacking and Demolition Works for Office Spaces in Singapore</h2>
+        <p class="card-excerpt">What hacking and demolition works involve, BCA regulatory requirements, and what to check before work begins.</p>
+        <span class="card-link">Read Article →</span>
+      </a>
+
+      <a href="blog-what-is-reinstatement.html" class="blog-card">
+        <span class="card-category">Complete Guide</span>
+        <h2 class="card-title">What is Office Reinstatement in Singapore? A Complete Guide for Tenants</h2>
+        <p class="card-excerpt">Everything a tenant needs to know about the reinstatement process — steps, timeline, costs, and common mistakes to avoid.</p>
+        <span class="card-link">Read Article →</span>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section class="bottom-cta">
+    <div class="bottom-cta-inner">
+      <h2>Ready to start your reinstatement?</h2>
+      <p>Get a free, no-obligation on-site assessment from Singapore's reinstatement specialists. We'll scope the full job and give you an accurate quote — no guesswork.</p>
+      <div class="cta-buttons">
+        <a href="index.html#quote" class="btn-primary">Get Free Quote</a>
+        <a href="tel:+6588733633" class="btn-secondary">Call +65 8873 3633</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2024 IA Builders &amp; Engineering Pte Ltd</p>
+    <a href="tel:+6588733633">+65 8873 3633</a>
+  </footer>
+
+</body>
+</html>
