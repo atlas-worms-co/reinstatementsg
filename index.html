@@ -1141,6 +1141,10 @@
     text-transform: uppercase;
     font-family: var(--font-mono);
   }
+  .form-field label .req {
+    color: var(--accent);
+    font-style: normal;
+  }
   .form-field input,
   .form-field select,
   .form-field textarea {
@@ -1895,7 +1899,7 @@
       </div>
       <div class="quote-form reveal" style="transition-delay:0.15s" id="quoteForm">
         <div class="form-field">
-          <label for="f-name">Your Name</label>
+          <label for="f-name">Your Name <span class="req">*</span></label>
           <input type="text" id="f-name" placeholder="Jane Tan" autocomplete="name">
         </div>
         <div class="form-field">
@@ -1903,11 +1907,11 @@
           <input type="text" id="f-company" placeholder="Acme Pte Ltd" autocomplete="organization">
         </div>
         <div class="form-field">
-          <label for="f-email">Email Address</label>
+          <label for="f-email">Email Address <span class="req">*</span></label>
           <input type="email" id="f-email" placeholder="jane@company.com" autocomplete="email">
         </div>
         <div class="form-field">
-          <label for="f-phone">Phone / WhatsApp</label>
+          <label for="f-phone">Phone / WhatsApp <span class="req">*</span></label>
           <input type="tel" id="f-phone" placeholder="+65 9000 0000" autocomplete="tel">
         </div>
         <div class="form-field">
@@ -1934,6 +1938,7 @@
             Request Free On-Site Quote →
           </button>
         </div>
+        <div class="form-note full" style="margin-bottom:0;padding-bottom:0;font-size:11px;opacity:0.6;"><span style="color:var(--accent)">*</span> Required fields</div>
         <div class="form-note full">
           We respond within 4 business hours. On-site quote visits are free and carry no obligation. Your information is used only to contact you about this enquiry.
         </div>
