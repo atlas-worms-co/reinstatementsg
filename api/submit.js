@@ -11,7 +11,6 @@ export default async function handler(req, res) {
       access_key: process.env.WEB3FORMS_KEY,
       subject: `New Reinstatement Enquiry — ${company || name}`,
       from_name: 'reinstatement.sg',
-      to: 'valerielow11@gmail.com',
       name,
       company,
       email,
