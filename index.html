@@ -1996,7 +1996,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     <div class="footer-bottom">
       <div class="footer-copy">
-        © 2024 IA Builders & Engineering Pte Ltd. All rights reserved.<br>
+        © <span id="yr"></span> IA Builders & Engineering Pte Ltd. All rights reserved.<br>
         UEN: [Company UEN] · <a href="#">Privacy Policy</a>
       </div>
       <div class="footer-copy">
@@ -2135,5 +2135,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     }
   }, { passive: true });
 </script>
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
 </body>
 </html>

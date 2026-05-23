@@ -482,9 +482,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   <!-- FOOTER -->
   <footer>
-    <p>© 2024 IA Builders &amp; Engineering Pte Ltd</p>
+    <p>© <span id="yr"></span> IA Builders &amp; Engineering Pte Ltd</p>
     <a href="tel:+6588733633">+65 8873 3633</a>
   </footer>
 
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
 </body>
 </html>

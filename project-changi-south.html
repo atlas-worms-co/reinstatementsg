@@ -507,7 +507,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <footer>
   <div class="container footer-simple">
-    <div class="footer-copy">© 2024 IA Builders & Engineering Pte Ltd</div>
+    <div class="footer-copy">© <span id="yr"></span> IA Builders & Engineering Pte Ltd</div>
     <div class="footer-copy"><a href="tel:+6588733633" style="color:var(--accent)">+65 8873 3633</a></div>
   </div>
 </footer>
@@ -561,5 +561,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     if (e.key === 'Escape') closeLightbox();
   });
 </script>
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
 </body>
 </html>
